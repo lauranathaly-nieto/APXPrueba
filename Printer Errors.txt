@@ -1,0 +1,17 @@
+public class Printer {
+    
+    public static String printerError(String s) {
+        String invalido = "n ñ o p q r s t u v w x y z";
+        int x = 0;
+        int cont = 0;
+        while (s.length() > x){
+          String letra = String.valueOf(s.charAt(x));
+          if(invalido.contains(letra)){
+            cont = cont + 1;
+          }
+          x++;
+        }
+        String Error = cont + "/" + s.length();
+        return Error;
+    }
+}
