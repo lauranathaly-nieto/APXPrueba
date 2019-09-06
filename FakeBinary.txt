@@ -1,0 +1,22 @@
+public class FakeBinary {
+    public static String fakeBin(String cadena ) {
+        char num = '5';
+        char i = '1';
+        char j = '0';
+        int x = 0;
+        StringBuilder remplazo = new StringBuilder(cadena);
+        while (cadena.length() > x){
+        if (cadena.charAt(x) < num){
+           remplazo.setCharAt(x,j);
+        }
+        else if (cadena.charAt(x) >= num)
+           remplazo.setCharAt(x,i);
+        
+        x++;
+        }
+        cadena = remplazo.toString();
+        System.out.println(cadena);
+        return cadena;
+       } 
+    }
+
